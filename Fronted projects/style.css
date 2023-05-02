@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Bodoni Moda', serif;
+    
+     font-size: 1.2rem;      /* by default font size 1rem  */
+    
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+   background:linear-gradient(to right,green,yellowgreen);
+}
+.left-side{
+    flex-basis: 30%;
+}
+
+
+
+.heading{
+    font-size:3rem;
+    color:wheat;
+   text-align: center;
+}
+.subheading{
+    color:#ddd;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.box img{
+width: 23px;
+}
+
+
+
+.gallery{
+    flex-basis: 50%;
+    display: grid;
+    gap: 8px;
+    grid-template-columns:repeat(3, 1fr) ;
+
+    /* grid-template-rows: 120px 120px 120px ; */ /*& same method*/
+    grid-auto-rows: 120px;
+    
+}
+
+.box{
+    background-size: cover;
+    background-position: top ;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #222;
+     background-blend-mode:hard-light;
+     transition: all 1s ease-in-out;
+     cursor: pointer;
+}
+ 
+#box-1{
+    
+    /* grid-column:1/3;       */
+
+
+    /* grid-row: span 2;           & These are same method */
+     grid-row: 1/3; 
+    
+} 
+
+
+/* ! Utility Classes */
+.row-2{
+    grid-row: span 2;
+}
+
+.col-2{
+    grid-column: span 2;
+}
+
+
+/* ^ Hover things */
+.box:hover{
+    background-color: #999;
+    background-position: center;
+    box-shadow: 0 0 4px white;
+
+
+}
